@@ -19,7 +19,7 @@ func randstring(n int) string {
 }
 
 func port(tag string, host int) string {
-	s := "/var/tmp/824-"
+	s := "E:\\go\\MIT6.824-"
 	s += strconv.Itoa(os.Getuid()) + "/"
 	os.Mkdir(s, 0777)
 	s += "px-"
@@ -365,9 +365,7 @@ func TestManyForget(t *testing.T) {
 	fmt.Printf("  ... Passed\n")
 }
 
-//
 // does paxos forgetting actually free the memory?
-//
 func TestForgetMem(t *testing.T) {
 	runtime.GOMAXPROCS(4)
 
@@ -453,9 +451,7 @@ func TestForgetMem(t *testing.T) {
 	fmt.Printf("  ... Passed\n")
 }
 
-//
 // does Max() work after Done()s?
-//
 func TestDoneMax(t *testing.T) {
 	runtime.GOMAXPROCS(4)
 
@@ -572,9 +568,7 @@ func TestRPCCount(t *testing.T) {
 	fmt.Printf("  ... Passed\n")
 }
 
-//
 // many agreements (without failures)
-//
 func TestMany(t *testing.T) {
 	runtime.GOMAXPROCS(4)
 
@@ -621,10 +615,8 @@ func TestMany(t *testing.T) {
 	fmt.Printf("  ... Passed\n")
 }
 
-//
 // a peer starts up, with proposal, after others decide.
 // then another peer starts, without a proposal.
-//
 func TestOld(t *testing.T) {
 	runtime.GOMAXPROCS(4)
 
@@ -659,9 +651,7 @@ func TestOld(t *testing.T) {
 	fmt.Printf("  ... Passed\n")
 }
 
-//
 // many agreements, with unreliable RPC
-//
 func TestManyUnreliable(t *testing.T) {
 	runtime.GOMAXPROCS(4)
 

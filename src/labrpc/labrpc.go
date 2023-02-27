@@ -178,7 +178,8 @@ func (rn *Network) LongDelays(yes bool) {
 	rn.longDelays = yes
 }
 
-func (rn *Network) ReadEndnameInfo(endname interface{}) (enabled bool,
+func (rn *Network) ReadEndnameInfo(endname interface{}) (
+	enabled bool,
 	servername interface{}, server *Server, reliable bool, longreordering bool,
 ) {
 	rn.mu.Lock()
